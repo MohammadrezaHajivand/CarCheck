@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.11">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CarCheck.Domain.Core\CarCheck.Domain.Core.csproj" />
+    <ProjectReference Include="..\CarCheck.Domain.Service.AppService\CarCheck.Application.Services.csproj" />
+    <ProjectReference Include="..\CarCheck.Infrastructure.EFCore\CarCheck.Infrastructure.EFCore.csproj" />
+  </ItemGroup>
+
+</Project>

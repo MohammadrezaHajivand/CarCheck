@@ -1,0 +1,33 @@
+﻿@page
+@model LoginModel
+@{
+    ViewData["Title"] = "Admin Login";
+}
+
+<h2>ورود مدیر سیستم</h2>
+
+<form method="post">
+    <label>نام کاربری:</label>
+    <input type="text" name="Username" required />
+    <label>رمز عبور:</label>
+    <input type="password" name="Password" required />
+    <button type="submit">ورود</button>
+</form>
+
+@if (!string.IsNullOrEmpty(Model.ErrorMessage))
+{
+    <p style="color:red">@Model.ErrorMessage</p>
+}
+
+<style>
+    form {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        margin: 20px auto;
+    }
+    input, button {
+        margin: 5px 0;
+        padding: 8px;
+    }
+</style>

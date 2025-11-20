@@ -1,0 +1,57 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "CarCheck.Application.Services/1.0.0": {
+        "dependencies": {
+          "CarCheck.Domain.Core": "1.0.0",
+          "CarCheck.Domain.Service.Service": "1.0.0",
+          "Dtos": "1.0.0"
+        },
+        "runtime": {
+          "CarCheck.Application.Services.dll": {}
+        }
+      },
+      "CarCheck.Domain.Core/1.0.0": {
+        "runtime": {
+          "CarCheck.Domain.Core.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "CarCheck.Domain.Service.Service/1.0.0": {
+        "dependencies": {
+          "CarCheck.Domain.Core": "1.0.0"
+        },
+        "runtime": {
+          "CarCheck.Domain.Service.Service.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CarCheck.Application.Services/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CarCheck.Domain.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CarCheck.Domain.Service.Service/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

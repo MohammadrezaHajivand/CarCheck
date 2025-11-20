@@ -1,0 +1,17 @@
+C:\Users\Lenovo\Desktop\c#\hw20\CarCheck\CarCheck\CarCheck.Domain.Service.AppService\bin\Debug\net9.0\CarCheck.Application.Services.deps.json
+C:\Users\Lenovo\Desktop\c#\hw20\CarCheck\CarCheck\CarCheck.Domain.Service.AppService\bin\Debug\net9.0\CarCheck.Application.Services.dll
+C:\Users\Lenovo\Desktop\c#\hw20\CarCheck\CarCheck\CarCheck.Domain.Service.AppService\bin\Debug\net9.0\CarCheck.Application.Services.pdb
+C:\Users\Lenovo\Desktop\c#\hw20\CarCheck\CarCheck\CarCheck.Domain.Service.AppService\bin\Debug\net9.0\CarCheck.Domain.Core.dll
+C:\Users\Lenovo\Desktop\c#\hw20\CarCheck\CarCheck\CarCheck.Domain.Service.AppService\bin\Debug\net9.0\CarCheck.Domain.Service.Service.dll
+C:\Users\Lenovo\Desktop\c#\hw20\CarCheck\CarCheck\CarCheck.Domain.Service.AppService\bin\Debug\net9.0\CarCheck.Domain.Core.pdb
+C:\Users\Lenovo\Desktop\c#\hw20\CarCheck\CarCheck\CarCheck.Domain.Service.AppService\bin\Debug\net9.0\CarCheck.Domain.Service.Service.pdb
+C:\Users\Lenovo\Desktop\c#\hw20\CarCheck\CarCheck\CarCheck.Domain.Service.AppService\obj\Debug\net9.0\CarCheck.Application.Services.csproj.AssemblyReference.cache
+C:\Users\Lenovo\Desktop\c#\hw20\CarCheck\CarCheck\CarCheck.Domain.Service.AppService\obj\Debug\net9.0\CarCheck.Application.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lenovo\Desktop\c#\hw20\CarCheck\CarCheck\CarCheck.Domain.Service.AppService\obj\Debug\net9.0\CarCheck.Application.Services.AssemblyInfoInputs.cache
+C:\Users\Lenovo\Desktop\c#\hw20\CarCheck\CarCheck\CarCheck.Domain.Service.AppService\obj\Debug\net9.0\CarCheck.Application.Services.AssemblyInfo.cs
+C:\Users\Lenovo\Desktop\c#\hw20\CarCheck\CarCheck\CarCheck.Domain.Service.AppService\obj\Debug\net9.0\CarCheck.Application.Services.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Desktop\c#\hw20\CarCheck\CarCheck\CarCheck.Domain.Service.AppService\obj\Debug\net9.0\CarCheck.76A640D2.Up2Date
+C:\Users\Lenovo\Desktop\c#\hw20\CarCheck\CarCheck\CarCheck.Domain.Service.AppService\obj\Debug\net9.0\CarCheck.Application.Services.dll
+C:\Users\Lenovo\Desktop\c#\hw20\CarCheck\CarCheck\CarCheck.Domain.Service.AppService\obj\Debug\net9.0\refint\CarCheck.Application.Services.dll
+C:\Users\Lenovo\Desktop\c#\hw20\CarCheck\CarCheck\CarCheck.Domain.Service.AppService\obj\Debug\net9.0\CarCheck.Application.Services.pdb
+C:\Users\Lenovo\Desktop\c#\hw20\CarCheck\CarCheck\CarCheck.Domain.Service.AppService\obj\Debug\net9.0\ref\CarCheck.Application.Services.dll

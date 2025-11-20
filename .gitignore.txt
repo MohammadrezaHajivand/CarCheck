@@ -1,0 +1,27 @@
+# Build results
+bin/
+obj/
+*.log
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Visual Studio Code
+.vscode/
+
+# EF Core Migrations
+Migrations/
+
+# ASP.NET secrets
+secrets.json
+
+# Others
+*.DS_Store
+*.db
+*.sqlite
+*.pdb
+*.cache
+*.vs/

@@ -1,0 +1,52 @@
+﻿@page
+@model CreateRequestModel
+@{
+    ViewData["Title"] = "ثبت درخواست معاینه فنی";
+}
+
+<h2>ورود مهمان و ثبت درخواست</h2>
+
+<form method="post">
+    <label>نام کامل:</label>
+    <input type="text" asp-for="Dto.FullName" required />
+
+    <label>کد ملی:</label>
+    <input type="text" asp-for="Dto.NationalCode" required />
+
+    <label>پلاک خودرو:</label>
+    <input type="text" asp-for="Dto.PlateNumber" required />
+
+    <label>سال ساخت:</label>
+    <input type="number" asp-for="Dto.YearOfManufacture" required />
+
+    <label>مدل خودرو:</label>
+    <select asp-for="Dto.ModelId">
+        @foreach (var item in Model.Models)
+        {
+            <option value="@item.Id">@item.Name</option>
+        }
+    </select>
+
+    <label>تاریخ درخواست:</label>
+    <input type="date" asp-for="Dto.RequestedDate" required />
+
+    <button type="submit">ثبت درخواست</button>
+</form>
+
+@if (!string.IsNullOrEmpty(Model.Message))
+{
+    <p>@Model.Message</p>
+}
+
+<style>
+    form {
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+        margin: 20px auto;
+    }
+    input, select, button {
+        margin: 5px 0;
+        padding: 8px;
+    }
+</style>

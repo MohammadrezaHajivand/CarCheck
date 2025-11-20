@@ -1,0 +1,49 @@
+﻿@page
+@model RequestsModel
+@{
+    ViewData["Title"] = "درخواست‌های ثبت‌شده";
+}
+
+<h2>لیست درخواست‌ها</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>نام</th>
+            <th>کد ملی</th>
+            <th>پلاک</th>
+            <th>تاریخ</th>
+            <th>وضعیت</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var r in Model.Requests)
+        {
+            <tr>
+                <td>@r.FullName</td>
+                <td>@r.NationalCode</td>
+                <td>@r.PlateNumber</td>
+                <td>@r.RequestedDate.ToShortDateString()</td>
+                <td>@r.Status</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<style>
+    table {
+        width: 90%;
+        margin: 20px auto;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        border: 1px solid #ccc;
+        padding: 8px;
+        text-align: center;
+    }
+
+    th {
+        background-color: #eee;
+    }
+</style>

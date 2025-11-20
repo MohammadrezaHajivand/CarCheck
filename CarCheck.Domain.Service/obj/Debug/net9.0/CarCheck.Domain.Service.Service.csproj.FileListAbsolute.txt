@@ -1,0 +1,15 @@
+C:\Users\Lenovo\Desktop\c#\hw20\CarCheck\CarCheck\CarCheck.Domain.Service\bin\Debug\net9.0\CarCheck.Domain.Service.Service.deps.json
+C:\Users\Lenovo\Desktop\c#\hw20\CarCheck\CarCheck\CarCheck.Domain.Service\bin\Debug\net9.0\CarCheck.Domain.Service.Service.dll
+C:\Users\Lenovo\Desktop\c#\hw20\CarCheck\CarCheck\CarCheck.Domain.Service\bin\Debug\net9.0\CarCheck.Domain.Service.Service.pdb
+C:\Users\Lenovo\Desktop\c#\hw20\CarCheck\CarCheck\CarCheck.Domain.Service\bin\Debug\net9.0\CarCheck.Domain.Core.dll
+C:\Users\Lenovo\Desktop\c#\hw20\CarCheck\CarCheck\CarCheck.Domain.Service\bin\Debug\net9.0\CarCheck.Domain.Core.pdb
+C:\Users\Lenovo\Desktop\c#\hw20\CarCheck\CarCheck\CarCheck.Domain.Service\obj\Debug\net9.0\CarCheck.Domain.Service.Service.csproj.AssemblyReference.cache
+C:\Users\Lenovo\Desktop\c#\hw20\CarCheck\CarCheck\CarCheck.Domain.Service\obj\Debug\net9.0\CarCheck.Domain.Service.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lenovo\Desktop\c#\hw20\CarCheck\CarCheck\CarCheck.Domain.Service\obj\Debug\net9.0\CarCheck.Domain.Service.Service.AssemblyInfoInputs.cache
+C:\Users\Lenovo\Desktop\c#\hw20\CarCheck\CarCheck\CarCheck.Domain.Service\obj\Debug\net9.0\CarCheck.Domain.Service.Service.AssemblyInfo.cs
+C:\Users\Lenovo\Desktop\c#\hw20\CarCheck\CarCheck\CarCheck.Domain.Service\obj\Debug\net9.0\CarCheck.Domain.Service.Service.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Desktop\c#\hw20\CarCheck\CarCheck\CarCheck.Domain.Service\obj\Debug\net9.0\CarCheck.806BD221.Up2Date
+C:\Users\Lenovo\Desktop\c#\hw20\CarCheck\CarCheck\CarCheck.Domain.Service\obj\Debug\net9.0\CarCheck.Domain.Service.Service.dll
+C:\Users\Lenovo\Desktop\c#\hw20\CarCheck\CarCheck\CarCheck.Domain.Service\obj\Debug\net9.0\refint\CarCheck.Domain.Service.Service.dll
+C:\Users\Lenovo\Desktop\c#\hw20\CarCheck\CarCheck\CarCheck.Domain.Service\obj\Debug\net9.0\CarCheck.Domain.Service.Service.pdb
+C:\Users\Lenovo\Desktop\c#\hw20\CarCheck\CarCheck\CarCheck.Domain.Service\obj\Debug\net9.0\ref\CarCheck.Domain.Service.Service.dll
