@@ -1,23 +1,24 @@
 ﻿@page
 @model LoginModel
 @{
-    ViewData["Title"] = "Admin Login";
+    ViewData["Title"] = "ورود به سامانه";
 }
 
-<h2>ورود مدیر سیستم</h2>
+<h2>ورود با کد ملی</h2>
+
+@if (!string.IsNullOrEmpty(Model.Message))
+{
+    <p style="color:red">@Model.Message</p>
+}
 
 <form method="post">
-    <label>نام کاربری:</label>
-    <input type="text" name="Username" required />
-    <label>رمز عبور:</label>
-    <input type="password" name="Password" required />
+    <input type="text" asp-for="NationalCode" placeholder="کد ملی" />
     <button type="submit">ورود</button>
 </form>
 
-@if (!string.IsNullOrEmpty(Model.ErrorMessage))
-{
-    <p style="color:red">@Model.ErrorMessage</p>
-}
+<form method="post" asp-page-handler="Guest">
+    <button type="submit">ورود به عنوان مهمان</button>
+</form>
 
 <style>
     form {
@@ -26,6 +27,7 @@
         width: 300px;
         margin: 20px auto;
     }
+
     input, button {
         margin: 5px 0;
         padding: 8px;

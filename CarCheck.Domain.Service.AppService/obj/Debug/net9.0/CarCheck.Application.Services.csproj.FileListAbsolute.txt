@@ -10,6 +10,7 @@ C:\Users\Lenovo\Desktop\c#\hw20\CarCheck\CarCheck\CarCheck.Domain.Service.AppSer
 C:\Users\Lenovo\Desktop\c#\hw20\CarCheck\CarCheck\CarCheck.Domain.Service.AppService\obj\Debug\net9.0\CarCheck.Application.Services.AssemblyInfoInputs.cache
 C:\Users\Lenovo\Desktop\c#\hw20\CarCheck\CarCheck\CarCheck.Domain.Service.AppService\obj\Debug\net9.0\CarCheck.Application.Services.AssemblyInfo.cs
 C:\Users\Lenovo\Desktop\c#\hw20\CarCheck\CarCheck\CarCheck.Domain.Service.AppService\obj\Debug\net9.0\CarCheck.Application.Services.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Desktop\c#\hw20\CarCheck\CarCheck\CarCheck.Domain.Service.AppService\obj\Debug\net9.0\CarCheck.Application.Services.sourcelink.json
 C:\Users\Lenovo\Desktop\c#\hw20\CarCheck\CarCheck\CarCheck.Domain.Service.AppService\obj\Debug\net9.0\CarCheck.76A640D2.Up2Date
 C:\Users\Lenovo\Desktop\c#\hw20\CarCheck\CarCheck\CarCheck.Domain.Service.AppService\obj\Debug\net9.0\CarCheck.Application.Services.dll
 C:\Users\Lenovo\Desktop\c#\hw20\CarCheck\CarCheck\CarCheck.Domain.Service.AppService\obj\Debug\net9.0\refint\CarCheck.Application.Services.dll

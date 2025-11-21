@@ -1598,8 +1598,7 @@
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
           "CarCheck.Domain.Core": "1.0.0",
-          "CarCheck.Domain.Service.Service": "1.0.0",
-          "Dtos": "1.0.0"
+          "CarCheck.Domain.Service.Service": "1.0.0"
         },
         "compile": {
           "bin/placeholder/CarCheck.Application.Services.dll": {}
@@ -1644,16 +1643,6 @@
         },
         "runtime": {
           "bin/placeholder/CarCheck.Infrastructure.EFCore.dll": {}
-        }
-      },
-      "Dtos/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v9.0",
-        "compile": {
-          "bin/placeholder/Dtos.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Dtos.dll": {}
         }
       }
     }
@@ -4753,11 +4742,6 @@
       "type": "project",
       "path": "../CarCheck.Infrastructure.EFCore/CarCheck.Infrastructure.EFCore.csproj",
       "msbuildProject": "../CarCheck.Infrastructure.EFCore/CarCheck.Infrastructure.EFCore.csproj"
-    },
-    "Dtos/1.0.0": {
-      "type": "project",
-      "path": "../Dtos/Dtos.csproj",
-      "msbuildProject": "../Dtos/Dtos.csproj"
     }
   },
   "projectFileDependencyGroups": {

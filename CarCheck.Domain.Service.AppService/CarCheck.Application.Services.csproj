@@ -9,7 +9,7 @@
   <ItemGroup>
     <ProjectReference Include="..\CarCheck.Domain.Core\CarCheck.Domain.Core.csproj" />
     <ProjectReference Include="..\CarCheck.Domain.Service\CarCheck.Domain.Service.Service.csproj" />
-    <ProjectReference Include="..\Dtos\Dtos.csproj" />
+	  
   </ItemGroup>
 
 </Project>

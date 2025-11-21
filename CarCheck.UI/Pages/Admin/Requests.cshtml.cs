@@ -11,9 +11,7 @@ namespace CarCheck.UI.Pages.Admin
 
         public IActionResult OnGet()
         {
-            if (HttpContext.Session.GetString("IsAdmin") != "true")
-                return RedirectToPage("/Admin/Login");
-
+            
             var entities = _queryService.GetAll();
             Requests = entities.Select(r => new InspectionRequestViewDto
             {

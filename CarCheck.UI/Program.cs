@@ -32,7 +32,7 @@ builder.Services.AddScoped<IInspectionRequestAppService, InspectionRequestAppSer
 
 //Services
 builder.Services.AddScoped<IUserService, UserService>();
-builder.Services.AddScoped<IInspectionRequestService, IInspectionRequestService>();
+builder.Services.AddScoped<IInspectionRequestService, InspectionRequestService>();
 builder.Services.AddScoped<IVehicleService, VehicleService>();
 
 
@@ -60,5 +60,9 @@ app.UseAuthorization();
 app.MapStaticAssets();
 app.MapRazorPages()
    .WithStaticAssets();
-
+app.MapGet("/", context =>
+{
+    context.Response.Redirect("/Admin/Login");
+    return Task.CompletedTask;
+});
 app.Run();

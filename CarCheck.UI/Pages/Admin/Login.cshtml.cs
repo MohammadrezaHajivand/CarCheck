@@ -1,25 +1,38 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using CarCheck.Application.Services.Interfaces;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace CarCheck.UI.Pages.Admin
+namespace CarCheck.UI.Pages.Admin;
+
+public class LoginModel : PageModel
 {
-    public class LoginModel : PageModel
+    private readonly IUserAppService _userAppService;
+
+    public LoginModel(IUserAppService userAppService)
     {
-        [BindProperty] public string Username { get; set; }
-        [BindProperty] public string Password { get; set; }
-        public string ErrorMessage { get; set; }
-
-        public IActionResult OnPost()
-        {
-            if (Username == "admin" && Password == "1234")
-            {
-                HttpContext.Session.SetString("IsAdmin", "true");
-                return RedirectToPage("/Admin/Requests");
-            }
-
-            ErrorMessage = "نام کاربری یا رمز عبور اشتباه است.";
-            return Page();
-        }
+        _userAppService = userAppService;
     }
 
+    [BindProperty]
+    public string NationalCode { get; set; }
+
+    public string Message { get; set; }
+
+
+    public IActionResult OnPost()
+    {
+        var user = _userAppService.GetByNationalCode(NationalCode);
+        if (user == null)
+        {
+            Message = "کاربر یافت نشد";
+            return Page();
+        }
+
+        return RedirectToPage("CreateRequest", new { userId = user.Id });
+    }
+
+    public IActionResult OnPostGuest()
+    {
+        return RedirectToPage("/Admin/Requests", new { userId = 0 });
+    }
 }

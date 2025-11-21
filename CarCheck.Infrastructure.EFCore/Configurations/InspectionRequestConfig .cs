@@ -25,13 +25,17 @@ namespace CarCheck.Infrastructure.EFCore.Configs
             builder.Property(r => r.Status)
                    .IsRequired();
 
-            builder.HasOne<User>()
+            builder.HasOne(r => r.User)
                    .WithMany()
-                   .HasForeignKey(r => r.UserId);
+                   .HasForeignKey(r => r.UserId)
+                   .OnDelete(DeleteBehavior.Restrict);
 
-            builder.HasOne<Vehicle>()
+            builder.HasOne(r => r.Vehicle)
                    .WithMany()
-                   .HasForeignKey(r => r.VehicleId);
+                   .HasForeignKey(r => r.VehicleId)
+                   .OnDelete(DeleteBehavior.Cascade);
         }
+
+
     }
 }

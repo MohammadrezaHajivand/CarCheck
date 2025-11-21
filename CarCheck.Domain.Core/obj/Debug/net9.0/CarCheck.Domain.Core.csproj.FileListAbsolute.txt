@@ -5,6 +5,7 @@ C:\Users\Lenovo\Desktop\c#\hw20\CarCheck\CarCheck\CarCheck.Domain.Core\obj\Debug
 C:\Users\Lenovo\Desktop\c#\hw20\CarCheck\CarCheck\CarCheck.Domain.Core\obj\Debug\net9.0\CarCheck.Domain.Core.AssemblyInfoInputs.cache
 C:\Users\Lenovo\Desktop\c#\hw20\CarCheck\CarCheck\CarCheck.Domain.Core\obj\Debug\net9.0\CarCheck.Domain.Core.AssemblyInfo.cs
 C:\Users\Lenovo\Desktop\c#\hw20\CarCheck\CarCheck\CarCheck.Domain.Core\obj\Debug\net9.0\CarCheck.Domain.Core.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Desktop\c#\hw20\CarCheck\CarCheck\CarCheck.Domain.Core\obj\Debug\net9.0\CarCheck.Domain.Core.sourcelink.json
 C:\Users\Lenovo\Desktop\c#\hw20\CarCheck\CarCheck\CarCheck.Domain.Core\obj\Debug\net9.0\CarCheck.Domain.Core.dll
 C:\Users\Lenovo\Desktop\c#\hw20\CarCheck\CarCheck\CarCheck.Domain.Core\obj\Debug\net9.0\refint\CarCheck.Domain.Core.dll
 C:\Users\Lenovo\Desktop\c#\hw20\CarCheck\CarCheck\CarCheck.Domain.Core\obj\Debug\net9.0\CarCheck.Domain.Core.pdb

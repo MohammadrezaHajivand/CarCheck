@@ -9,8 +9,7 @@
       "CarCheck.Application.Services/1.0.0": {
         "dependencies": {
           "CarCheck.Domain.Core": "1.0.0",
-          "CarCheck.Domain.Service.Service": "1.0.0",
-          "Dtos": "1.0.0"
+          "CarCheck.Domain.Service.Service": "1.0.0"
         },
         "runtime": {
           "CarCheck.Application.Services.dll": {}

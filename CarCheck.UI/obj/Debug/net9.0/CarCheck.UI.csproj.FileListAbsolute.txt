@@ -156,6 +156,7 @@ C:\Users\Lenovo\Desktop\c#\hw20\CarCheck\CarCheck\CarCheck.UI\obj\Debug\net9.0\C
 C:\Users\Lenovo\Desktop\c#\hw20\CarCheck\CarCheck\CarCheck.UI\obj\Debug\net9.0\CarCheck.UI.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Lenovo\Desktop\c#\hw20\CarCheck\CarCheck\CarCheck.UI\obj\Debug\net9.0\CarCheck.UI.RazorAssemblyInfo.cache
 C:\Users\Lenovo\Desktop\c#\hw20\CarCheck\CarCheck\CarCheck.UI\obj\Debug\net9.0\CarCheck.UI.RazorAssemblyInfo.cs
+C:\Users\Lenovo\Desktop\c#\hw20\CarCheck\CarCheck\CarCheck.UI\obj\Debug\net9.0\CarCheck.UI.sourcelink.json
 C:\Users\Lenovo\Desktop\c#\hw20\CarCheck\CarCheck\CarCheck.UI\obj\Debug\net9.0\rjimswa.dswa.cache.json
 C:\Users\Lenovo\Desktop\c#\hw20\CarCheck\CarCheck\CarCheck.UI\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
 C:\Users\Lenovo\Desktop\c#\hw20\CarCheck\CarCheck\CarCheck.UI\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json

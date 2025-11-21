@@ -24,16 +24,6 @@
         "runtime": {
           "bin/placeholder/CarCheck.Domain.Service.Service.dll": {}
         }
-      },
-      "Dtos/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v9.0",
-        "compile": {
-          "bin/placeholder/Dtos.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Dtos.dll": {}
-        }
       }
     }
   },
@@ -47,18 +37,12 @@
       "type": "project",
       "path": "../CarCheck.Domain.Service/CarCheck.Domain.Service.Service.csproj",
       "msbuildProject": "../CarCheck.Domain.Service/CarCheck.Domain.Service.Service.csproj"
-    },
-    "Dtos/1.0.0": {
-      "type": "project",
-      "path": "../Dtos/Dtos.csproj",
-      "msbuildProject": "../Dtos/Dtos.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net9.0": [
       "CarCheck.Domain.Core >= 1.0.0",
-      "CarCheck.Domain.Service.Service >= 1.0.0",
-      "Dtos >= 1.0.0"
+      "CarCheck.Domain.Service.Service >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -99,9 +83,6 @@
             },
             "C:\\Users\\Lenovo\\Desktop\\c#\\hw20\\CarCheck\\CarCheck\\CarCheck.Domain.Service\\CarCheck.Domain.Service.Service.csproj": {
               "projectPath": "C:\\Users\\Lenovo\\Desktop\\c#\\hw20\\CarCheck\\CarCheck\\CarCheck.Domain.Service\\CarCheck.Domain.Service.Service.csproj"
-            },
-            "C:\\Users\\Lenovo\\Desktop\\c#\\hw20\\CarCheck\\CarCheck\\Dtos\\Dtos.csproj": {
-              "projectPath": "C:\\Users\\Lenovo\\Desktop\\c#\\hw20\\CarCheck\\CarCheck\\Dtos\\Dtos.csproj"
             }
           }
         }

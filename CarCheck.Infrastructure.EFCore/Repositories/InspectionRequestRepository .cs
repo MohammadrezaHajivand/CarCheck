@@ -46,13 +46,5 @@ namespace CarCheck.Infrastructure.EFCore.Repositories
                 .Include(r => r.Vehicle)
                 .ToList();
         }
-
-
-
-
     }
-
-
-
-
 }
