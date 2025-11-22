@@ -7,33 +7,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CarCheck.Infrastructure.EFCore.Repositories
+namespace CarCheck.Infrastructure.EFCore.Repositories;
+
+public class VehicleModelRepository(CarCheckDbContext _context) : IVehicleModelRepository
 {
-    public class VehicleModelRepository : IVehicleModelRepository
+
+    public void Add(VehicleModel model)
     {
-        private readonly CarCheckDbContext _context;
-
-        public VehicleModelRepository(CarCheckDbContext context)
-        {
-            _context = context;
-        }
-
-        public void Add(VehicleModel model)
-        {
-            _context.VehicleModels.Add(model);
-            _context.SaveChanges();
-        }
-
-        public VehicleModel? GetById(int id)
-        {
-            return _context.VehicleModels.FirstOrDefault(m => m.Id == id);
-        }
-
-        public List<VehicleModel> GetAll()
-        {
-            return _context.VehicleModels.ToList();
-        }
+        _context.VehicleModels.Add(model);
+        _context.SaveChanges();
     }
 
+    public VehicleModel? GetById(int id)
+    {
+        return _context.VehicleModels.FirstOrDefault(m => m.Id == id);
+    }
 
+    public List<VehicleModel> GetAll()
+    {
+        return _context.VehicleModels.ToList();
+    }
 }

@@ -10,9 +10,16 @@ namespace CarCheck.Domain.Core.Entities
     {
         public int Id { get; set; }
         public string PlateNumber { get; set; }
-        public int YearOfManufacture { get; set; }
+        public DateTime YearOfManufacture { get; set; }
+
         public int ModelId { get; set; }
+        public VehicleModel VehicleModel { get; set; }
+
         public int OwnerId { get; set; }
+        public User Owener { get; set; }
+
+        public InspectionRequest? inspectionRequest { get; set; }
+
     }
 
 }

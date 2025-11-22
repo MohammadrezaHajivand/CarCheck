@@ -22,13 +22,14 @@ namespace CarCheck.Infrastructure.EFCore.Configs
             builder.Property(v => v.YearOfManufacture)
                    .IsRequired();
 
-            builder.HasOne<User>()
-                   .WithMany()
-                   .HasForeignKey(v => v.OwnerId);
+            builder.Property(v => v.OwnerId)
+                .IsRequired();
 
-            builder.HasOne<VehicleModel>()
-                   .WithMany()
-                   .HasForeignKey(v => v.ModelId);
+            builder.HasOne(v => v.Owener)
+                .WithMany(u => u.vehicles)
+                .HasForeignKey(v => v.OwnerId);
+
+
         }
     }
 }

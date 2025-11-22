@@ -9,5 +9,6 @@ namespace CarCheck.Domain.Core.Contract.Services
         User? GetById(int id);
         List<User> GetAll();
         User? GetByNationalCode(string nationalCode);
+        User? Login(string nationalCode, string password);
     }
 }

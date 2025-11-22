@@ -26,5 +26,6 @@ namespace CarCheck.Domain.Service.Service
         {
             return context.GetByPlate(plateNumber);
         }
+
     }
 }

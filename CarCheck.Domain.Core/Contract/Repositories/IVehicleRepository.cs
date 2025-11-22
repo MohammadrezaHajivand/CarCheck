@@ -10,5 +10,4 @@ namespace CarCheck.Domain.Core.Contract.Repositories
         Vehicle? GetByPlate(string plateNumber);
     }
 
-
 }

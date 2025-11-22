@@ -11,7 +11,7 @@ namespace CarCheck.Domain.Core.Entities
         public int Id { get; set; }
         public string Name { get; set; }
         public string Manufacturer { get; set; }
+        public List<Vehicle>? Vehicles { get; set; }
+
     }
-
-
 }

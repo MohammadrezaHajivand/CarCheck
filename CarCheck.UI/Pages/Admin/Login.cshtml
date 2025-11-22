@@ -4,7 +4,7 @@
     ViewData["Title"] = "ورود به سامانه";
 }
 
-<h2>ورود با کد ملی</h2>
+<h2>ورود به سامانه</h2>
 
 @if (!string.IsNullOrEmpty(Model.Message))
 {
@@ -13,6 +13,7 @@
 
 <form method="post">
     <input type="text" asp-for="NationalCode" placeholder="کد ملی" />
+    <input type="password" asp-for="Password" placeholder="رمز عبور" />
     <button type="submit">ورود</button>
 </form>
 

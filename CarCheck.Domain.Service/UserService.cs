@@ -25,5 +25,10 @@ namespace CarCheck.Domain.Service.Service
         {
             return userRepo.GetByNationalCode(nationalCode);
         }
+        public User? Login(string nationalCode, string password)
+        {
+            return userRepo.GetByNationalCodeAndPassword(nationalCode, password);
+        }
+
     }
 }

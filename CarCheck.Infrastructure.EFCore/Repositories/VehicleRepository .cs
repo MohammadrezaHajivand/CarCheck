@@ -1,23 +1,12 @@
 ﻿using CarCheck.Domain.Core.Contract.Repositories;
 using CarCheck.Domain.Core.Entities;
 using CarCheck.Infrastructure.EFCore.Persistence;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace CarCheck.Infrastructure.EFCore.Repositories
 {
-    public class VehicleRepository : IVehicleRepository
+    public class VehicleRepository(CarCheckDbContext _context) : IVehicleRepository
     {
-        private readonly CarCheckDbContext _context;
-
-        public VehicleRepository(CarCheckDbContext context)
-        {
-            _context = context;
-        }
-
         public void Add(Vehicle vehicle)
         {
             _context.Vehicles.Add(vehicle);
@@ -40,7 +29,9 @@ namespace CarCheck.Infrastructure.EFCore.Repositories
         {
             return _context.Vehicles.FirstOrDefault(v => v.PlateNumber == plateNumber);
         }
+
     }
-
-
 }
+
+
+

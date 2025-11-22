@@ -6,15 +6,8 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CarCheck.Infrastructure.EFCore.Repositories
 {
-    public class InspectionRequestRepository : IInspectionRequestRepository
+    public class InspectionRequestRepository(CarCheckDbContext _context) : IInspectionRequestRepository
     {
-        private readonly CarCheckDbContext _context;
-
-        public InspectionRequestRepository(CarCheckDbContext context)
-        {
-            _context = context;
-        }
-
         public void Add(InspectionRequest request)
         {
             _context.InspectionRequests.Add(request);
@@ -45,6 +38,14 @@ namespace CarCheck.Infrastructure.EFCore.Repositories
                 .Include(r => r.User)
                 .Include(r => r.Vehicle)
                 .ToList();
+        }
+        public InspectionRequest? GetLastByPlate(string plateNumber)
+        {
+            return _context.InspectionRequests
+                .Include(r => r.Vehicle)
+                .Where(r => r.Vehicle.PlateNumber == plateNumber)
+                .OrderByDescending(r => r.RequestedDate)
+                .FirstOrDefault();
         }
     }
 }

@@ -31,5 +31,11 @@ namespace CarCheck.Domain.Service.Service
         {
             return inspectionRepo.GetByUserId(userId);
         }
+        public InspectionRequest? GetLastByPlate(string plateNumber) // ✅ پیاده‌سازی متد جدید
+        {
+            return inspectionRepo.GetLastByPlate(plateNumber);
+        }
+
+
     }
 }

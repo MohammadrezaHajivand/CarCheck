@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CarCheck.Infrastructure.EFCore.Migrations
 {
     [DbContext(typeof(CarCheckDbContext))]
-    [Migration("20251121072030_tables")]
-    partial class tables
+    [Migration("20251122160135_init")]
+    partial class init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -50,24 +50,15 @@ namespace CarCheck.Infrastructure.EFCore.Migrations
                     b.Property<int>("UserId")
                         .HasColumnType("int");
 
-                    b.Property<int>("UserId1")
-                        .HasColumnType("int");
-
                     b.Property<int>("VehicleId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("VehicleId1")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
                     b.HasIndex("UserId");
 
-                    b.HasIndex("UserId1");
-
-                    b.HasIndex("VehicleId");
-
-                    b.HasIndex("VehicleId1");
+                    b.HasIndex("VehicleId")
+                        .IsUnique();
 
                     b.ToTable("InspectionRequests", (string)null);
                 });
@@ -85,10 +76,23 @@ namespace CarCheck.Infrastructure.EFCore.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
+                    b.Property<bool>("IsAdmin")
+                        .HasColumnType("bit");
+
                     b.Property<string>("NationalCode")
                         .IsRequired()
                         .HasMaxLength(10)
                         .HasColumnType("nvarchar(10)");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("Username")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.HasKey("Id");
 
@@ -117,8 +121,8 @@ namespace CarCheck.Infrastructure.EFCore.Migrations
                         .HasMaxLength(20)
                         .HasColumnType("nvarchar(20)");
 
-                    b.Property<int>("YearOfManufacture")
-                        .HasColumnType("int");
+                    b.Property<DateTime>("YearOfManufacture")
+                        .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 
@@ -146,8 +150,8 @@ namespace CarCheck.Infrastructure.EFCore.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
 
                     b.HasKey("Id");
 
@@ -156,27 +160,15 @@ namespace CarCheck.Infrastructure.EFCore.Migrations
 
             modelBuilder.Entity("CarCheck.Domain.Core.Entities.InspectionRequest", b =>
                 {
-                    b.HasOne("CarCheck.Domain.Core.Entities.User", null)
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("CarCheck.Domain.Core.Entities.User", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId1")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("CarCheck.Domain.Core.Entities.Vehicle", null)
-                        .WithMany()
-                        .HasForeignKey("VehicleId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .WithMany("inspectionRequests")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("CarCheck.Domain.Core.Entities.Vehicle", "Vehicle")
-                        .WithMany()
-                        .HasForeignKey("VehicleId1")
+                        .WithOne("inspectionRequest")
+                        .HasForeignKey("CarCheck.Domain.Core.Entities.InspectionRequest", "VehicleId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -187,17 +179,38 @@ namespace CarCheck.Infrastructure.EFCore.Migrations
 
             modelBuilder.Entity("CarCheck.Domain.Core.Entities.Vehicle", b =>
                 {
-                    b.HasOne("CarCheck.Domain.Core.Entities.VehicleModel", null)
-                        .WithMany()
+                    b.HasOne("CarCheck.Domain.Core.Entities.VehicleModel", "VehicleModel")
+                        .WithMany("Vehicles")
                         .HasForeignKey("ModelId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("CarCheck.Domain.Core.Entities.User", null)
-                        .WithMany()
+                    b.HasOne("CarCheck.Domain.Core.Entities.User", "Owener")
+                        .WithMany("vehicles")
                         .HasForeignKey("OwnerId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Owener");
+
+                    b.Navigation("VehicleModel");
+                });
+
+            modelBuilder.Entity("CarCheck.Domain.Core.Entities.User", b =>
+                {
+                    b.Navigation("inspectionRequests");
+
+                    b.Navigation("vehicles");
+                });
+
+            modelBuilder.Entity("CarCheck.Domain.Core.Entities.Vehicle", b =>
+                {
+                    b.Navigation("inspectionRequest");
+                });
+
+            modelBuilder.Entity("CarCheck.Domain.Core.Entities.VehicleModel", b =>
+                {
+                    b.Navigation("Vehicles");
                 });
 #pragma warning restore 612, 618
         }

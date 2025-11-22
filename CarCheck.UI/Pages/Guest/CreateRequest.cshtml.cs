@@ -5,17 +5,8 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace CarCheck.UI.Pages.Guest
 {
-    public class CreateRequestModel : PageModel
+    public class CreateRequestModel(IVehicleModelAppService _modelService, IInspectionRequestAppService _requestService) : PageModel
     {
-        private readonly IVehicleModelAppService _modelService;
-        private readonly IInspectionRequestAppService _requestService;
-
-        public CreateRequestModel(IVehicleModelAppService modelService, IInspectionRequestAppService requestService)
-        {
-            _modelService = modelService;
-            _requestService = requestService;
-        }
-
         public List<VehicleModelDto> Models { get; set; }
 
         [BindProperty]

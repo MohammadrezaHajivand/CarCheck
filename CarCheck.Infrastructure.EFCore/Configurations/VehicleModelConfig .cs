@@ -14,7 +14,13 @@ namespace CarCheck.Infrastructure.EFCore.Configs
 
             builder.Property(m => m.Name)
                    .IsRequired()
-                   .HasMaxLength(100);
+                   .HasMaxLength(20);
+
+            builder.HasMany(m => m.Vehicles)
+            .WithOne(v => v.VehicleModel)
+            .HasForeignKey(v => v.ModelId)
+            .OnDelete(DeleteBehavior.Restrict);
+
         }
     }
 }

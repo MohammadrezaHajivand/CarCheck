@@ -4,35 +4,37 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace CarCheck.UI.Pages.Admin;
 
-public class LoginModel : PageModel
+public class LoginModel(IAuthAppService _authAppService) : PageModel
 {
-    private readonly IUserAppService _userAppService;
-
-    public LoginModel(IUserAppService userAppService)
-    {
-        _userAppService = userAppService;
-    }
-
     [BindProperty]
     public string NationalCode { get; set; }
 
-    public string Message { get; set; }
+    [BindProperty]
+    public string Password { get; set; }
 
+    public string Message { get; set; }
 
     public IActionResult OnPost()
     {
-        var user = _userAppService.GetByNationalCode(NationalCode);
-        if (user == null)
+        var result = _authAppService.Login(NationalCode, Password);
+
+        if (!result.IsSuccess)
         {
-            Message = "کاربر یافت نشد";
+            Message = result.Message;
             return Page();
         }
 
-        return RedirectToPage("CreateRequest", new { userId = user.Id });
+        if (result.IsAdmin)
+        {
+            return RedirectToPage("/Admin/Requests");
+        }
+
+        return RedirectToPage("/User/CreateRequest", new { userId = result.UserId });
     }
 
     public IActionResult OnPostGuest()
     {
-        return RedirectToPage("/Admin/Requests", new { userId = 0 });
+        var result = _authAppService.Login(null, null, guest: true);
+        return RedirectToPage("/Guest/CreateRequest", new { userId = 0 });
     }
 }

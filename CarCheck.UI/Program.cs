@@ -25,15 +25,21 @@ builder.Services.AddScoped<IVehicleRepository, VehicleRepository>();
 builder.Services.AddScoped<IInspectionRequestRepository, InspectionRequestRepository>();
 builder.Services.AddScoped<IVehicleModelRepository, VehicleModelRepository>();
 
+
 // AppServices
 builder.Services.AddScoped<IUserAppService, UserAppService>();
 builder.Services.AddScoped<IVehicleAppService, VehicleAppService>();
 builder.Services.AddScoped<IInspectionRequestAppService, InspectionRequestAppService>();
+builder.Services.AddScoped<IVehicleModelAppService, VehicleModelAppService>();
+builder.Services.AddScoped<IAuthAppService, AuthAppService>();
+
 
 //Services
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IInspectionRequestService, InspectionRequestService>();
 builder.Services.AddScoped<IVehicleService, VehicleService>();
+builder.Services.AddScoped<IVehicleModelService, VehicleModelService>();
+
 
 
 

@@ -20,7 +20,7 @@
     <input type="number" asp-for="Dto.YearOfManufacture" required />
 
     <label>مدل خودرو:</label>
-    <select asp-for="Dto.ModelId">
+    <select asp-for="Dto.ModelId" required>
         @foreach (var item in Model.Models)
         {
             <option value="@item.Id">@item.Name</option>

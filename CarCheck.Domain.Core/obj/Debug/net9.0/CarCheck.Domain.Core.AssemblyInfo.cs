@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CarCheck.Domain.Core")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4a897bbdb7c3b854a779d9a1b172a07f25930af2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6ac05e55b73953ea51248afbaff2ed8e6674d0de")]
 [assembly: System.Reflection.AssemblyProductAttribute("CarCheck.Domain.Core")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CarCheck.Domain.Core")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

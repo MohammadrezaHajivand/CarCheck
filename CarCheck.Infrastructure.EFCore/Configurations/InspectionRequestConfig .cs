@@ -26,13 +26,13 @@ namespace CarCheck.Infrastructure.EFCore.Configs
                    .IsRequired();
 
             builder.HasOne(r => r.User)
-                   .WithMany()
+                   .WithMany(u => u.inspectionRequests)
                    .HasForeignKey(r => r.UserId)
-                   .OnDelete(DeleteBehavior.Restrict);
+                   .OnDelete(DeleteBehavior.Restrict);//agar user hazf shod dar khast hazf nashe.
 
             builder.HasOne(r => r.Vehicle)
-                   .WithMany()
-                   .HasForeignKey(r => r.VehicleId)
+                   .WithOne(v => v.inspectionRequest)
+                   .HasForeignKey<InspectionRequest>(r => r.VehicleId)//اینجا چرا شبیه بقیه موار نیست و به ای دی وسیله نقلیه دسترسی ندارم ؟
                    .OnDelete(DeleteBehavior.Cascade);
         }
 

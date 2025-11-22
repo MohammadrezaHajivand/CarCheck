@@ -5,15 +5,8 @@ using CarCheck.Infrastructure.EFCore.Persistence;
 
 namespace CarCheck.Infrastructure.EFCore.Repositories
 {
-    public class UserRepository : IUserRepository
+    public class UserRepository(CarCheckDbContext _context) : IUserRepository
     {
-        private readonly CarCheckDbContext _context;
-
-        public UserRepository(CarCheckDbContext context)
-        {
-            _context = context;
-        }
-
         public void Add(User user)
         {
             _context.Users.Add(user);
@@ -34,6 +27,17 @@ namespace CarCheck.Infrastructure.EFCore.Repositories
         {
             return _context.Users.FirstOrDefault(u => u.NationalCode == nationalCode);
         }
+
+        public User? GetByUsername(string username)
+        {
+            return _context.Users.FirstOrDefault(u => u.Username == username);
+        }
+        public User? GetByNationalCodeAndPassword(string nationalCode, string password)
+        {
+            return _context.Users
+                .FirstOrDefault(u => u.NationalCode == nationalCode && u.Password == password);
+        }
+
 
     }
 }

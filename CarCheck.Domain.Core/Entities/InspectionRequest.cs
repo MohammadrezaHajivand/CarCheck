@@ -16,7 +16,6 @@ namespace CarCheck.Domain.Core.Entities
         public int VehicleId { get; set; }
         public Vehicle Vehicle { get; set; }
 
-
     }
 
 }
